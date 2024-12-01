@@ -19,7 +19,7 @@ public class ChangeUserTest extends BaseTest {
                 api.createUser(login, password, "Andrey");
         }
 
-        @Test()
+        @Test
         @DisplayName("Пользователь должен быть обновлен")
         public void updateUser() {
                 Response response = api.updateUser(login, password, "sergey@example.ru", "Sergey");
@@ -29,7 +29,7 @@ public class ChangeUserTest extends BaseTest {
                 api.deleteUser("sergey@example.ru", password);
         }
 
-        @Test()
+        @Test
         @DisplayName("Пользователь не должен быть обновлен")
         public void updateUserWithoutCredentials() {
                 Response response = api.updateUser("", "", "sergey@example.ru", "Sergey");
